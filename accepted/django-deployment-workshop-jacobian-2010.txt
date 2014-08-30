@@ -1,0 +1,160 @@
+==========================
+Django deployment workshop
+==========================
+
+Presenter: Jacob Kaplan-Moss <jacob@jacobian.org>
+
+Intended audience: intermediate to advanced Django users with sites nearing or
+in production. Python developers using other web frameworks will likely be
+able to follow along -- see the note in the summary, below.
+
+Tutorial format: hands-on "workshop"
+
+Recording: Please record and freely distribute my tutorial!
+
+Requirements: students will need a computer and Amazon EC2 and S3 accounts,
+and will be asked to familiarize themselves with the process of starting and
+stopping EC2 virtual machines before the class.
+
+Notes for reviewers
+===================
+
+I'll need to be able to send an instruction email to all the students a couple
+weeks before the class containing a bit of pre-class prep. This'll include
+information about the example application the class will use, instructions on
+getting Amazon accounts set up, etc.
+
+Promotional summary
+===================
+
+So you've written a Django site... now what? Writing the application is just
+the beginning; now you've got to put it into production! In this hands-on
+workshop we'll walk through the creation of a full Django deployment
+environment running on a cluster of (virtual) machines. 
+
+This class will introduce students to a wide variety of technologies,
+including Amazon's EC2 and S3, Fabric, Varnish, nginx, mod_wsgi, memcached,
+PostgreSQL, pgpool, pg_standby, and more.
+
+By the end of the class, each student will have created an environment
+featuring:
+
+    - Multiple levels of caching and load balancing.
+    - Multiple web application servers.
+    - Shared media servers.
+    - Redundant replicated database servers.
+    - Separate caching servers. 
+    
+We'll create this whole stack on Amazon EC2 virtual machines, so students will
+be able to take home a complete copy of all the deployment configuration for
+future review at their leisure.
+
+Note: the example application used in this class with be a Django site, and
+the class assumes at least a moderate comfort level with Django. However, the
+tools and techniques apply just as well to other Python web frameworks, so
+users of other tools will likely be able to follow along fairly easily.
+
+Outline for review
+==================
+
+* Getting started                                   [0:00 - 0:10]
+    * Introducing our example application.
+    * Overview of where we're going.
+    * Very brief intro to EC2 and S3.
+    * Exercise: run our first VM.
+
+* Application server: mod_wsgi                      [0:10 - 0:30]
+    * What's an application server? 
+    * Introducing mod_wsgi
+    * Configuring Apache and mod_wsgi
+    * Exercise: deploy the application under mod_wsgi.
+    * Exercise: initial load test.
+
+* Database server: PostgreSQL                       [0:30 - 0:45]
+    * Why a separate database server?
+    * Configuring PostgreSQL
+    * Exercise: deploy PostgreSQL.
+
+* Introducing Fabric                                [0:45 - 1:00]
+    * What's Fabric?
+    * Writing fabfiles.
+    * Integrating fabfiles into Django applications.
+    * Exercise: deploy using Fabric
+    
+* Multiple web servers                              [1:00 - 1:30]
+    * Why multiple web servers?
+    * "Shared nothing"
+    * Dealing with medi
+    * Load balancers
+    * Introducing nginx
+    * Using nginx as a reverse proxy
+    * Exercise: deploy onto multiple machines.
+    * Exercise: crash a web server.
+
+[Break]
+
+* Caching servers                                   [0:00 - 0:15]
+    * Local caching vs. dedicated caching.
+    * Introducing memcached
+    * Using memcached with Django.
+    * Exercise: deploy with multiple cache servers.
+
+* Database connection middleware                    [0:15 - 0:30]
+    * Why connection middleware?
+    * Introducing pgpool.
+    * Configuring pg_pool and Django.
+    * Exercise: deploy pg_pool
+    
+* Database redundancy                               [0:30 - 1:00]
+    * Redundancy strategies
+    * Warm standby with pg_standby
+    * Exercise: configure warm standby
+    * Exercise: fall over to the slave
+    
+* Upstream caches                                   [1:00 - 1:25]
+    * Why use an upstream cache?
+    * Do I need caching *and* load balancing?
+    * Introducing Varnish
+    * Using Varnish on top of Django
+    * Exercise: add you a Varnish.
+    
+* Final exercise: final load testing.               [1:25 - 1:30]
+    
+Outline for website
+===================
+
+* Introduction: the deployment question
+* Application server: mod_wsgi
+* Database server: PostgreSQL
+* Automated deployment with Fabric
+* Multiple web servers; load balancing with nginx
+* Adding memcached
+* Database connection middleware: pgpool
+* Database redundancy: warm standby
+* Upstream caching: Varnish
+* Final load testing: how'd we do?
+
+Presenter bio
+=============
+
+Jacob Kaplan-Moss is one of the lead developers and co-creator of Django.
+Jacob's an experienced software developer with a focus on web application
+architecture. In 2005 Jacob joined the Lawrence Journal-World, a locally-owned
+newspaper in Lawrence, Kansas, and helped develop and eventually open source
+Django. Today, Jacob's a consultant with Revolution Systems, where he helps
+companies deploy and scale websites using Python and Django.
+
+Previous experience
+===================
+
+I regularly speak about Python and Django. I've given tutorials at PyCon 2007,
+2008, and 2009; at OSCON in 2006, 2007, 2008, and 2009, and I've spoken and
+taught at dozens of other conferences since 2005.
+
+I teach Django and Python classes as part of my business; I've taught
+week-long Django introductions both privately and publicly, as well as one-day
+"master classes."
+
+I'm also the co-author (with Adrian Holovaty) of The Definitive Guide to
+Django (Apress 2008) and have contributed extensively to Django's official
+documentation.
