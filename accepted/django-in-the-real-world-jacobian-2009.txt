@@ -1,0 +1,208 @@
+========================
+Django in the Real World
+========================
+
+:Authors:
+    * Jacob Kaplan-Moss
+    * James Bennett
+:Contact: jacob@jacobian.org
+:Date: 2008-11-03
+
+Summary
+=======
+
+There's plenty of material (documentation, blogs, books) out there that'll help
+you write a site using Django... but then what? You've still got to test,
+deploy, monitor, and tune the site; failure at deployment time means all your
+beautiful code is for naught.
+
+This tutorial examines how best to cope when the Real World intrudes on your
+carefully designed website. We'll cover:
+
+    * How to structure your code, dependancies, and development environment with
+      an eye towards ease of deployment.
+      
+    * The different ways you should be testing and verifying your code.
+    
+    * How best to design staging and production environments.
+    
+    * Tools to automate deployment to production clusters (Capistrano_,
+      Fabric_), and ways to produce isolated repeatable deployments
+      (virtualenv_, pip_, zc.buildout_).
+      
+    * Designing and configuring application servers (mod_python_/mod_wsgi_)
+      and load distribution (nginx_, perlbal_).
+      
+    * Monitoring and logging sites in production.
+    
+    * Performance tuning, including profiling, tips for optimal cache use, and
+      getting the best performance out of application and database servers.
+
+Along the way, we'll discuss what's behind some of sites we've got in production
+right now, especially the problems we ran into and how we solved them. We'll
+also critique any production environments tutorial attendees would like to share
+with us.
+
+Intended audience
+=================
+
+Developers and system administrators who deploy Python-based web applications.
+
+Since this is the Python Conference, we'll expect at least a passing familiarity
+with Python, but most of the material will *not* be language specific, so those
+without Python experience should be able to following along.
+
+In a similar vein, this talk will focus on Django -- that is, after all, what
+we're familiar with -- but the material should be useful to *anyone* looking to
+deploy web applications based on dynamic languages.
+
+We'll ask folks with sites already in production to submit a description of
+their environment for us to offer improvements against; we'll talk about these
+specific examples and our own as they become relevant.
+
+We don't have a specific audience size in mind.
+
+Prerequisites and attendee requirements
+---------------------------------------
+
+None specifically. However, those with Django or Python-based applications in or
+nearing production should expect to get the most out of this tutorial.
+
+Outline
+=======
+
+* [5 min] Introduction                                                  [Jacob]
+    * Who we are, and about the sites we'll talking about.
+    * Overview of the problems that face web operations.
+
+* [30 min]  Structuring your app for deployment                         [James]
+    * Laying out settings, applications, and reusable components.
+    * Separating pieces for reuse.
+    * Managing reusable components ...
+        * ... internally developed.
+        * ... externally developed.
+    * Extending external projects ...
+        * ... without patching.
+        * ... if you must patch.
+        
+* [15 min] Testing                                                      [Jacob]
+    * "Internal" tests
+        * Unit tests/doctests
+        * Functional tests
+    * "External" tests
+        * Spiders, crawlers, and users.
+        
+* [20 min] Production environments                                      [James]
+    * System-level layout and best practices.
+    * Cluster design.
+    
+* [40 min] Deployment                                                   [Both]
+    * Fundamental principles of repeatable deployments.
+    * Getting code onto production servers...
+        * ... by hand.
+        * ... with Capistrano_.
+        * ... with Fabric_.        
+    * Managing dependancies on production servers ...
+        * ... by hand.
+        * ... with virtualenv_ and pip_.
+        * ... with zc.buildout_.
+
+* [30 min] The web app stack                                            [Jacob]
+    Maybe just talk about the web layer?
+    * Web server
+        * Apache and mod_python_.
+        * Apache and mod_wsgi_.
+        * FastCGI.
+        * nginx and mod_wsgi.
+        * ...
+    * Load balancing
+        * Why it's important.
+        * Perbal_.
+        * nginx_.
+    * DB load balancing
+        * ... and connection pooling
+        * ... distribution 
+        
+* [15 min] Monitoring production sites.                                 [Jacob]
+    * Uptime monitoring
+    * Performance monitoring
+    * Logging and log handing.
+    
+* [30 min] Performance and tuning                                       [James]
+    * Why performance isn't about optimization.
+    * Caching: the performance secret weapon.
+        * Low-level caching.
+        * Page-level caching.
+        * Site-wide caching.
+        * External caching.
+    * Application server tuning
+    * Database server tuning
+    * Profiling Python apps ...
+        * ... with cProfile.
+        * ... with DTrace
+
+Format
+======
+
+Interactive lecture: we'll use our outline as "talking points", but expect (and
+encourage) the attendees to drive discussion towards interesting or difficult
+points.
+
+Presenter Biographies
+=====================
+
+Jacob Kaplan-Moss is one of the lead developers of Django. At his day job, he's
+a software architect for Whiskey Media, one of those newfangled Web One-Point-Oh
+companies you've read so much about. A good deal of Jacob's work time is devoted
+to working on Django. Jacob previously worked for the Lawrence Journal-World, a
+locally-owned newspaper in Lawrence, KS where Django was developed.
+
+James Bennett is a developer at the Lawrence Journal-World and the release
+manager for Django. He's the proprietor of `djangosnippets.org`_, a site where
+Django users share useful snippets of reusable code, and the author of a growing
+number of Django add-ons. He blogs at b-list.org_ and is the author of
+`Practical Django Projects`_ (Apress, 2008).
+
+Promotional summary
+===================
+
+There's plenty of material (documentation, blogs, books) out there that'll help
+you write a site using Django... but then what? You've still got to test,
+deploy, monitor, and tune the site; failure at deployment time means all your
+beautiful code is for naught. This tutorial examines how best to cope when the
+Real World intrudes on your carefully designed website.
+
+Previous experience
+===================
+
+Jacob regularly speaks about Python and Django. He's given tutorials at PyCon in
+2007 and 2008, at OSCON in 2006, 2007, and 2008, and has spoken at dozens of
+other conferences since 2005.
+
+James has been speaking about Django since 2007; he's spoken and given tutorials
+at PyCon 2007, PyCon 2008, and DjangoCon 2008. He often speaks about reusable
+Django applications, a topic on which he is the acknowledged expert.
+
+James and Jacob have both written extensively about Django: James is the author
+of `Practical Django Projects`_ (Apress, 2008), Jacob co-wrote `The Definitive
+Guide to Django` (Apress, 2007), and both have contributed extensively to
+`Django's official documentation`_.
+
+Recording
+=========
+
+We'll happily give our permission to record and publish our tutorial provided
+it's distributed under a free license (i.e. Creative Commons).
+
+.. _Capistrano: http://capify.org/
+.. _Fabric: http://www.nongnu.org/fab/
+.. _virtualenv: http://pypi.python.org/pypi/virtualenv
+.. _pip: http://pip.openplans.org/
+.. _zc.buildout: http://pypi.python.org/pypi/zc.buildout
+.. _mod_python: http://www.modpython.org/
+.. _mod_wsgi: http://code.google.com/p/modwsgi/
+.. _nginx: http://nginx.net/
+.. _perlbal: http://www.danga.com/perlbal/
+.. _practical django projects: http://apress.com/book/view/1590599969
+.. _The Definitive Guide to Django: http://djangobook.com/
+.. _Django's official documentation: http://docs.djangoproject.com/
