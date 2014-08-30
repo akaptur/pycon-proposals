@@ -1,0 +1,104 @@
+====================
+The Django Ecosystem
+====================
+
+:Author: Jacob Kaplan-Moss
+:Contact: jacob@jacobian.org
+:Date: 2007-11-13
+
+Summary
+=======
+
+The past year has seen a real explosion of neat tools built with Django.
+There's a newfound maturity among these third-party additions to Django.
+This session presents some highlights of the Django ecosystem. We'll look at
+micro-frameworks for things like tagging, voting, and OpenID integration and
+also larger projects that turn Django into a web shop or a GIS server.
+
+Intended audience
+=================
+
+Django users, primarily, but anyone interested in what's going on in the
+Django ecosystem should find the talk interesting. Some of tool I'll present
+have parts generally useful outside of Django (GeoDjango_ and Typogrify_)
+and/or allow better integration with other Python libraries (Tranquil_).
+
+Outline
+=======
+
+I'll cover around around eight projects in a 30 minute session, or twelve in
+a 45 minute session, with a bit of sample code and a demo for each. There's
+a lot of development happing around Django right now, so it's hard to predict
+what the most interesting projects will be four months from now. Below is a list
+of projects I'd present today, but the final list may (and likely will) change 
+between now and PyCon.
+
+    * Django-atompub_: adds improved support for Atom syndication (RFC 4287)
+      and preliminary support for the Atom Publishing Protocol (RFC 5023).
+    
+    * Django-evolution_: one implementation (deseb_ is another) of schema
+      evolution (a.k.a "migrations") for Django.
+    
+    * Django-openid_: lets your Django application act as an OpenID
+      consumer. That is, this allows users to log in and/or register with
+      your site using OpenID.
+    
+    * Django-registration_: a few pre-built views to allow account
+      registration and basic password management.
+    
+    * Django-rest-interface_: a set of tools for quickly adding REST APIs on
+      top of your models. One of Django's 2007 Summer of Code projects.
+    
+    * Django-tagging_: adds tagging to your models.
+    
+    * Django-values_: add user-editable settings/properties to a Django site's admin
+      screens.
+    
+    * Django-voting_: adds simple thumbs-up/thumbs-down voting. Think Digg or Reddit.
+    
+    * GeoDjango_: GIS support for Django. Used in conjunction with Oracle or PostGIS this
+      gets you a full-featured GIS stack on top of Django.
+      
+    * `Review Board`_: a nifty code review tool built with Django.
+    
+    * Satchmo_: a web shop built on top of Django. Usable without any code modifications,
+      but also a good starting point for writing custom stores.
+    
+    * Tranquil_: use Django and SQLAlchemy together smoothly.
+    
+    * Typogrify_: good typography in your templates.
+
+.. _Django-atompub: http://code.google.com/p/django-atompub/
+.. _Django-evolution: http://code.google.com/p/django-evolution/
+.. _deseb: http://code.google.com/p/deseb/
+.. _Django-openid: 
+.. _Django-registration: http://code.google.com/p/django-registration
+.. _Django-rest-interface: http://code.google.com/p/django-rest-interface/
+.. _Django-tagging: http://code.google.com/p/django-tagging/
+.. _Django-values: http://code.google.com/p/django-values/
+.. _Django-voting: http://code.google.com/p/django-voting/
+.. _GeoDjango: http://code.djangoproject.com/wiki/GeoDjango
+.. _Review Board: http://www.review-board.org/
+.. _Satchmo: http://satchmoproject.com/
+.. _Tranquil: http://code.google.com/p/tranquil/
+.. _Typogrify: http://code.google.com/p/typogrify/
+
+Notes for reviewers
+===================
+
+I've indicated that I'd prefer a 45 minute session, but really I'm happy
+with either. I'll simply cover few projects in a shorter session.
+
+Recording
+=========
+
+I give permission to record and publish my PyCon presentation for free distribution.     
+   
+Presenter bio
+=============
+
+Jacob Kaplan-Moss is one of the lead developers of Django. At his day job,
+he's the lead developer for the Lawrence Journal-World, a locally-owned
+newspaper in Lawrence, KS where Django was developed. At the Journal-World,
+Jacob oversees development of Ellington, an online news publishing platforms
+for media companies.
