@@ -1,0 +1,130 @@
+Title: Python Performance Profiling: The Guts And The Glory
+
+Tracks: "Python", "Tools & Techniques"
+
+Duration: 40 minutes
+
+Description:
+
+If your talk is accepted this will be made public and printed in the program.
+Should be one paragraph, maximum 400 characters.
+
+Your Python program is too slow, and you need to optimize it. Where do you
+start? With the right tools, you can optimize your code where it counts. We’ll
+explore the guts of the Python profiler "Yappi" to understand its features and
+limitations. We’ll learn how to find the maximum performance wins with minimum
+effort.
+
+Prerequisite knowledge for this session:
+
+Some familiarity with Python. Basic understanding of multithreading.
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+My boss alerted me to an article on a popular site, which claimed to show that
+my open-source Python client for MongoDB is three times slower than the
+Javascript client. Anxiety immediately set in: Was this true? Could I improve
+it? What should I tell my boss?
+
+I'll describe three open-source profilers for Python, and explain why Yappi is
+the right profiler for this job.
+
+Optimization is like debugging: we use the scientific method. We form a
+hypothesis about what changes we can make to our code to make it faster, and we
+estimate how much improvement an optimization can yield. Then comes the second
+part of the scientific method: we test the hypothesis with an experiment.
+
+And now, let's return to the problem at hand: Is my code slow? We'll use Yappi
+to form some hypotheses, then validate them with tests. Finally, I have an
+answer to my boss's question, and better yet, I can back up my answer with hard
+evidence.
+
+Outline:
+
+* Setting the scene
+
+My boss alerted me to an article on a popular site, which claimed to show that
+my open-source Python client for MongoDB is three times slower than the
+Javascript client. Anxiety immediately set in: Was this true? Could I improve
+it? What should I tell my boss?
+
+* Why profile?
+
+A typical program spends almost all its time in a small subset of its code.
+Optimizing those hotspots is all that matters. This is what a profiler is for:
+it leads us straight to the functions where we should spend our effort. So I
+decided to profile the code in the article to see why it was slow.
+
+* Which profiler?
+
+I’ll describe three open-source profilers for Python: cProfile is a fast
+single-thread profiler included in the Python standard library.
+GreenletProfiler is my package for profiling Gevent applications. Yappi is a
+third-party package that can profile multiple threads. I used Yappi for this
+investigation, since it’s the most featureful.
+
+* How do we profile and what information do we get?
+
+Yappi has configuration options for how it measures time and which functions it
+profiles. I’ll show you how I configured and ran Yappi, and how I visualized
+its output in KCacheGrind.
+
+* How do we use the profiling information?
+
+I used KCacheGrind’s different views to narrow the search for hotspots, and
+calculated upper bounds for what performance enhancements I could achieve.
+Optimization is like debugging: we form a hypothesis for what changes will
+yield the best speedups, than perform experiments. This forms a virtuous cycle
+of benchmarking and improving our code. I’ll relate the shocking conclusion to
+my investigation of the slow code.
+
+* How does profiling work?
+
+If you’re like me, you can’t sleep if you don’t understand how something works.
+We’ll briefly explore how cProfile and Yappi hook into the Python interpreter’s
+guts, and how Yappi employs a clever trick to efficiently profile all running
+threads.
+
+Notes:
+
+Anything else you'd like the program committee to know when making their
+selection: your past speaking experience, open source community experience,
+etc.
+
+I’m a Senior Python Engineer at MongoDB in New York City. I’m the author of
+GreenletProfiler, a fast greenlet-aware profiler for Python. I wrote Motor, an
+async MongoDB driver for Tornado, and also Toro, a library of locks and queues
+for Tornado coroutines. I contribute to Python, PyMongo, MongoDB, Tornado, and
+Tulip / asyncio. I blog about Python and other topics at emptysquare.net and
+DZone.
+
+Past speaking experience:
+
+* "What Is Async, How Does It Work, and When Should I Use It?" Open Source
+  Bridge, June 2013.
+* Python coroutines. NY Python Meetup, April 2013.
+* Talks on topics including MongoDB schema design, replication, and the
+  aggregation framework. MongoDB Atlanta in April 2012, MongoDB Chicago in
+  November 2012, and WindyCityDB in January 2013.
+* Talks on Motor, my async driver for MongoDB and Python. MongoDB Chicago in
+  November 2012, Python and MongoDB Meetups in Seattle and Philadelphia, and at
+  PyGotham in June 2012.
+* MongoDB training sessions, with between 6 and 20 students, lasting 2 or 3
+  full days, given 4 times during 2012 and 2013.
+
+Videos of me speaking:
+
+* A lightning talk from PyCon 2013, about Toro, a package of locks and queues
+  for Python async coroutines.
+  http://www.youtube.com/watch?v=pYZNLOKEE5I
+
+Open source community experience:
+
+* Committer on Tulip, Guido van Rossum’s Python async framework. Author of its
+  Queue implementation.
+* Committer on PyMongo, the official Python driver for MongoDB.
+* Contributor to Tornado, a popular Python async framework.
+* Author of open-source Python packages GreenletProfiler, Motor, Toro, and
+  YieldPoints.

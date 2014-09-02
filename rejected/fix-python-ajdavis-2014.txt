@@ -1,0 +1,188 @@
+Title: You Can Fix Python
+
+Category: Python Core
+
+Duration: 30 minutes
+
+Description:
+
+If your talk is accepted this will be made public and printed in the program.
+Should be one paragraph, maximum 400 characters.
+
+If you think you’ve found a bug in Python, what’s next? This talk describes the
+rewarding, but sometimes irritating process of submitting a patch and passing
+code review. For illustration, you’ll learn about a funky bug in threading.py,
+and how it was diagnosed and fixed. Learn to avoid the pitfalls in the
+submission process, and find the shortest route to becoming a Python
+contributor!
+
+Audience:
+
+Who is the intended audience for your talk? (Be specific; "Python programmers"
+is not a good answer to this question.)
+
+Ambitious Python fans who want to participate in improving the language itself.
+
+Level: Experienced
+
+Objectives:
+
+What will attendees get out of your talk? When they leave the room, what will
+they know that they didn't know before?
+
+Attendees will learn how to contribute to Python, in more detail than is
+covered in the Python Developer's Guide. They’ll learn the concrete steps of
+submitting a patch and passing a multi-phase code review with a core team
+member. They’ll be warned off confusing parts of the bug tracker and the
+code-review tool so they can avoid frustration. They’ll be inspired to
+contribute a fix the next time they find a bug in Python. Finally, they’ll
+enjoy a mystery thriller about finding and fixing a bug in Thread.isAlive().
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+It’s hard to believe, but sometimes you’ll find a serious bug in a well-trod
+path of the standard library. We’ll take for example a bug that has long lurked
+in Thread.isAlive(), which was recently discovered and fixed.
+
+The first time you submit a patch to Python, there’s a series of steps not
+outlined in the Python Developer's Guide, and there are many pitfalls and
+confusing alleys. We’ll cover them all, using the isAlive() bug for
+illustration, so when you want to fix Python it will go smoothly.
+
+Getting code-reviewed by the core team is insanely educational! I’ll describe
+how your knowledge and style can be rapidly improved through the wisdom of the
+sages.
+
+For a Python fan, contributing to the language is a privilege. You can learn
+from the experts and come out feeling smart and proud. You’d be surprised how
+easily you can find a bug in the core. When you do, use what you’ve learned
+from this talk to avoid frustrations, and have a fun time contributing.
+
+Outline:
+
+I. Awakening to the Possibility Of a Bug in Python — 5 minutes
+
+A. Teaser: I’ll show code that starts a background thread, then calls
+os.fork(), and in the child process, calls isAlive() on the thread. What should
+this return? It should always return False. So why is it sometimes True?
+
+B. Background: A project I work on, PyMongo, uses a background thread to
+monitor the state of the database server. In Unix, only the thread that called
+fork() is copied to the child process, so the monitor is absent in the child.
+PyMongo should notice this condition and warn the user. I’ll show a code
+snippet that initializes PyMongo, calls fork(), and does an operation that
+should raise.
+
+C. Things Start to Go Wrong: I’ll show a simple test to assert that PyMongo
+detects a dead background thread. Sometimes it fails—why?
+
+II. Diagnosing the Bug — 7 minutes
+
+A. The Bug: I found that after a fork, calling isAlive() on the monitor thread
+would sometimes return True, which was wrong.
+
+B. How threading.py Is Supposed to Work: We’ll dive into threading.py to
+understand how it responds to forks. There’s a ballet involving the C function
+PyOS_AfterFork, which calls the Python function _after_fork(). The latter marks
+as “dead” all threads except the one that was copied to the child process. I’ll
+show slide-ready versions of these functions.
+
+C. Diagnosing the Bug: How could this ballet get tripped up? I’ll describe how
+I found the race condition in threading.py that leads a thread to think it’s
+alive when it’s actually dead.
+
+III. Fixing Python — 12 minutes
+
+A. Submitting a Patch
+
+1. If the bug is in multiple branches, you want to patch the tip of the default
+branch, or the latest branch with the bug. Leave backporting for later.
+
+2. Make a patch with “hg diff”. You want both a unittest and a fix. Open a bug
+report and attach the patch.
+
+3. The bug tracker, a system called Roundup, has been breached and used for
+spam in the past, so its messages are still often marked as spam. Make an email
+filter to ensure you get notifications.
+
+B. Code Review
+
+1. When you upload a patch it’s added to a code review tool, Rietveld. The
+“review” link takes you there from Roundup.
+
+2. You’ll get feedback on your patch in two places: Roundup and Rietveld.
+Remember to look both places.
+
+3. Once you have critiques to respond to, upload a new patch. Rietveld’s “Add
+Another Patch Set” link is broken; I’ll show you how to actually add another
+patch.
+
+4. Similarly, Rietveld’s “reply” link is broken. I’ll show you how to use
+Roundup for discussion, not Rietveld.
+
+5. Roundup’s links into Rietveld are confusing, and may make you think you
+haven’t uploaded your patch. I’ll show you the right link to click.
+
+(Note: I hope many bugs in the PSF’s versions of Roundup and Rietveld are fixed
+by the time of this talk; I’ll review these points to ensure they’re current
+before I present them.)
+
+IV. Payoff — 3 minutes
+
+A. Learning: Code reviews from core team members are insanely educational. Over
+several rounds of critique I made ever-cleaner fixes for the bug I found. This
+is a huge reason you should contribute to Python. It’s an unsurpassable method
+of improving your knowledge and style.
+
+B. Satisfaction: The satisfaction from getting a patch accepted is huge. You’ll
+feel smart and proud to be a contributor to the greatest language.
+
+V. Q & A — 3 minutes
+
+Notes:
+
+Anything else you'd like the program committee to know when making their
+selection: your past speaking experience, open source community experience,
+etc.
+
+Past speaking experience:
+
+* 40-minute talk called “What Is Async, How Does It Work, and When Should I Use
+  It?” at Open Source Bridge in June 2013.
+
+* 30 minute talk on coroutines in Tornado and Tulip, at the NY Python Meetup in
+  April 2013.
+
+* Several 40-minute talks at each of MongoDB Atlanta in April 2012, MongoDB
+  Chicago in November 2012, and WindyCityDB in January 2013. Topics included
+  MongoDB schema design, replication, and the aggregation framework.
+
+* A 3-hour tutorial on schema design at MongoDB Atlanta in April 2012, and a
+  3-hour tutorial on MongoDB and Tornado at WindyCityDB in January 2013.
+
+* 30- to 40-minute talks on Motor, my async driver for MongoDB and Tornado, at
+  MongoDB Chicago in November 2012, at Python and MongoDB Meetups in Seattle
+  and Philadelphia, and at PyGotham in June 2012.
+
+* MongoDB training sessions, with between 6 and 20 students, lasting 2 or 3
+  full days, given 4 times during 2012 and 2013.
+
+Videos of me speaking:
+
+A lightning talk from PyCon 2013, about Toro, a package of locks and queues for
+Tornado coroutines (I was the first speaker of the session):
+http://www.youtube.com/watch?v=pYZNLOKEE5I
+
+Open source community experience:
+
+* Committer on Tulip, author of its Queue implementation.
+
+* Committer on PyMongo.
+
+* Contributor to Tornado.
+
+* Author of PyPI packages Motor, Toro, and YieldPoints.
+
+* Regular blogger on Planet Python.
