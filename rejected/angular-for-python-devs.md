@@ -1,3 +1,11 @@
+**Feedback**
+
+*Unfortunately, I don't have a substantial amount of helpful feedback for you. Your proposal was a good one; however, we had another proposal on AngularJS, and we felt that we should accept one and only one of them, and we thought that the other talk's approach was slightly more useful.
+
+I know that's not a particularly helpful response; it doesn't give you anything meaningful for future proposals, and I'm sorry for that. In cases like this, it's difficult to quantify why we preferred A over B (especially since individual committee members often disagree on questions like that).*
+
+----
+
 ### Title
 Intro to AngularJS for Python Web Developers
 
