@@ -1,0 +1,269 @@
+Title: Dodge Disasters and March to Triumph as a Mentor
+
+Category: Education
+
+Duration: 30 minutes
+
+Description:
+
+If your talk is accepted this will be made public and printed in the program.
+Should be one paragraph, maximum 400 characters.
+
+Good engineers write good code, but the best engineers raise the skills of
+their junior colleagues, too. If you're a senior Python engineer, you must
+learn to mentor new hires. Especially if you're committed to diversity:
+mentorship is critical to the careers of women and minorities in tech. I have
+failed at mentoring, then succeeded. Learn from me and march to mentorship
+triumph.
+
+Audience:
+
+Who is the intended audience for your talk? (Be specific; "Python programmers"
+is not a good answer to this question.)
+
+Senior engineers, or those who aspire to be senior, who want to improve their
+success rate at mentoring junior engineers within their organizations.
+
+Level:
+
+Objectives:
+
+What will attendees get out of your talk? When they leave the room, what will
+they know that they didn't know before?
+
+The audience will laugh and weep at my past mistakes, and be inspired by the
+achievements of my apprentices. They'll learn warning signs that a mentoring
+relationship risks failure, and know what to do to prevent such failures.
+They'll come away with a checklist of prerequisites for a successful
+mentorship.
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+Who cares about being a good mentor? Your career depends on your success at
+mentoring. The higher levels of a technical career cannot be reached unless you
+demonstrate effective mentorship. As Etsy's John Allspaw writes, senior
+engineers "lift the skills and expertise of those around them." You must
+demonstrate that you have this quality.
+
+Besides, junior engineers depend on your generous mentorship for their
+advancement. Your organization's future depends on you, too: you need more
+senior engineers and there aren't enough to go around. Bringing up young coders
+is a huge, risky investment, but it's the only way we have to make senior
+engineers. And finally, at many companies, including mine, there are very few
+female programmers, and men hold most of the senior engineering roles. Your
+best weapon to fight for a fairer future is mentoring female coders.
+
+I'll present three case studies, from my experience mentoring interns and new
+hires at MongoDB, Inc. over the last two years. My first mentorship failed, the
+second went well, the third was an epic success. Why?
+
+First, we recap a disastrous mentorship and the warning signs I should have
+heeded: an absent visionary, unclear goals, an inexpert mentor (me), and the
+bad feeling that I ignored. We'll see the costly consequences of neglecting
+these bad omens.
+
+Second, we examine a mentorship that went rather well and led to a turnaround
+in my career as a mentor. I learned to recognize positive signs that augured a
+successful mentorship, and I developed character traits that are useful for a
+mentor: I trained myself to be eager to help, to understand what my apprentice
+didn't know, and to admit when I didn't know something. I also learned how
+crucial the personal relationship is, as an aspect of the professional one.
+
+Third, we celebrate a great internship. I designed it for success, based on the
+lessons I'd learned. I ensured there was a guiding visionary, expert mentors,
+and clear goals, and I cultivated a comfortable personal relationship with my
+interns. The interns made exceptional progress, culminating in their first
+speaking experience at a Python conference.
+
+Finally, I prove that your excuses for not being a good mentor are without
+merit. You can and should learn to train junior engineers well. Craftspeople
+have always trained the next generation by close relationships between masters
+and apprentices. If you are willing to develop your ability as a mentor, you
+can advance your own career, help your young colleagues and your company
+succeed, and lay the foundation for a fairer future. For people who love only
+code, it can be a sacrifice to spend time guiding junior engineers, but the
+payoff is among the best in the world.
+
+Outline:
+
+"Who cares? I just want to code."
+
+Influence. Our heroes—Guido, Kernighan and Ritchie, Hilary Mason, whoever—none
+of them worked alone. Their ideas are influential because they taught protégés.
+Your career. Your career depends on your success at mentoring. What is required
+of a senior engineer at your organization? What about the next promotion after
+that? The higher levels of a technical career cannot be reached unless you
+demonstrate effective mentorship. As Etsy's John Allspaw writes, senior
+engineers "lift the skills and expertise of those around them." You must
+demonstrate that you have this quality.
+
+Their careers. Junior engineers depend on your mentorship for their
+advancement, too. So even if you're not ambitious, you should still be a
+generous mentor. Sacrifice some of your solo coding time for the sake of
+someone who wants to learn what you know, who wants to follow your footsteps
+and attain the same success.
+
+Your organization's future. It depends on you: you need more senior engineers
+and there aren't enough to go around. Bringing up young coders is a huge, risky
+investment, but it's the only way we have to make senior engineers. Besides,
+having better coders around you makes your job more fun.
+
+Diversity. At many companies, including mine, there are very few female
+programmers, and men hold most of the senior engineering roles. Industry-wide,
+many women leave tech before they reach the upper levels, but a good mentor can
+prevent this attrition. If you're in a situation like mine, your best weapon to
+fight for a fairer future is mentoring female coders.
+
+Case studies. I've mentored interns and new hires at MongoDB, Inc. over the
+last two years. My first mentorship failed, the second went well, the third was
+an epic success. Why?
+
+The disaster.
+
+Warning sign 1: absent visionary. In 2013, a colleague proposed a "big data"
+project. He didn't have time to mentor the project himself. I volunteered to
+oversee two interns on this project.
+
+Warning sign 2: unclear goals. The project also didn't have clear goals, and I
+was unable to set them because the project wasn't my idea.
+
+Warning sign 3: inexpert mentor. The project wasn't in my area of expertise. I
+didn't understand my interns' work, so I couldn't guide or evaluate them. They
+moved fast but no one was steering.
+
+Warning sign 4: feeling bad. I felt the project was going badly, but I didn't
+want to admit it. I failed to examine my own feelings honestly. I hid from my
+interns. Late in the summer they were taken from me: they were reassigned to a
+project under a different supervisor so they could be better evaluated for
+full-time offers.
+
+The turnaround.
+
+That fall I got another shot at mentoring. A young woman joined the Python team
+at MongoDB for a 6-week rotation. She fixed bugs and added features to PyMongo,
+the MongoDB Python driver. The mentorship went well and I had a chance to
+compare it to the failed project:
+
+Positive sign: expert mentor. My apprentice worked on code I knew and loved, so
+I could advise her well.
+
+Positive sign: small, clear goals. She had a series of tickets to resolve, so
+it was clear when she was stuck and when she was moving.
+
+Positive sign: guiding visionary. My apprentice joined a team with a leader and
+roadmap.
+
+Positive sign: compatible personalities. We liked each other and developed a
+friendship. Don't underestimate the importance of personal comfort. It's very
+difficult to be a good mentor if you're not simpatico.
+
+Some lessons learned.
+
+Show that you're eager to help. Sometimes solve your apprentice's problem while
+explaining the solution, or introduce him to someone who can, or give a hint
+without denying him the hunt.
+
+Know what the apprentice doesn't know. What a senior engineer has internalized
+is opaque to the apprentice: Knowing the best tool for the job, how to
+recognize code that's maintainable or not, where the project fits into the
+wider strategy. Introduce tools at a manageable pace, in an order dictated by
+the project. Bring apprentices to planning meetings. Describe the wider
+strategy in which apprentices' work fits: it's motivating and communicates
+respect.
+
+Admit you don't know. My protégé told me that "most people just pretend
+omniscience, which is super frustrating." A humble mentor is unintimidating,
+gives the apprentice permission not to know, either. If she is comfortable
+admitting she doesn't know she won't waste hours or days hesitating to ask.
+
+Problem-solving, rather than answer-knowing, is the skill you are teaching. Be
+eager for problems you and your apprentice must solve together.
+
+Ask for your apprentice's help. Request junior engineers' advice on your own
+work.
+
+The triumph.
+
+In 2014, I proposed an intern project. I designed it for success, based on the
+lessons I'd learned about mentorship. The project was: Revive an open-source
+Python driver for MongoDB and NumPy, called Monary, which wasn't maintained by
+its author. I organized two interns, a colleague, and Monary's author.
+
+Expert mentor: The project was near my expertise, and I recruited two other
+experts to help guide the project.
+
+Small clear goals: Long before the interns arrived, we had a detailed roadmap.
+It included both requirements and stretch goals.
+
+Guiding visionary: The project's original author was involved in planning the
+roadmap, and code-reviewed each submission.
+
+Success: The interns made exceptional progress over the summer adding features,
+improving the code, and writing docs. Their contributions give MongoDB a
+strategic advantage among scientific Python programmers. The interns gave a
+talk about Monary at a Python conference. The author was grateful for the
+contributions and having his project promoted. The interns had a fulfilling
+summer. I was given good reviews and I was assigned another new hire to mentor.
+
+Excuses: "I can't be a good mentor because…"
+
+"I'm an introvert." Many programmers are. But introverts make good mentors. We
+prefer one-on-one interactions, and we're better listeners than those gabby
+brainless extroverts are. So we're good mentors if we're willing to make the
+effort.
+
+"My knowledge is intuitive, I can't explain what I know." That's the kind of
+implicit knowledge apprenticeship is designed to transfer.
+
+"I'm not good at it." It takes practice. You're likely to have early failures,
+like me, and to improve slowly. Forgive yourself. Get a meta-mentor.
+
+"I still don't care, I just want to code." I give you permission to mentor only
+the junior engineers you like. Tell your boss whom you want to mentor and stick
+to the people you enjoy talking to. Your organization should have a graceful
+way to reassign mentors. There is no point trying to develop a close
+relationship with someone who doesn't appeal to you.
+
+Inspiring conclusion. Craftspeople have always trained the next generation by
+close relationships between masters and apprentices. If you are willing to
+develop your ability as a mentor, you can advance your own career, help your
+young colleagues and your company succeed, and lay the foundation for a fairer
+future. For people who love only code, it can be a sacrifice to spend time
+guiding junior engineers, but the payoff is among the best in the world.
+
+Notes:
+
+
+Anything else you'd like the program committee to know when making their
+selection: your past speaking experience, open source community experience,
+etc.
+
+Past speaking experience:
+
+
+"What Is Async, How Does It Work, and When Should I Use It?" at PyCon, OSCON,
+and PyCon APAC
+
+"Python Profiling: The Guts And The Glory" at PyCon APAC
+
+"Write an Excellent Programming Blog" at Open Source Bridge
+
+"The Weather of the Century" at MongoDB World
+
+
+Videos of me speaking:
+
+"Python Profiling: The Guts And The Glory" https://www.youtube.com/watch?v=BOKcZjI5zME
+
+"What Is Async?" http://emptysqua.re/blog/pycon-2014-video-what-is-async/
+
+"The Weather of the Century" https://www.mongodb.com/presentations/weather-century-part-3-visualization
+
+Open source community experience:
+Author of PyPI packages Motor and Toro.
+Committer on asyncio, author of its Queue implementation.
+Committer on PyMongo.
+Contributor to Tornado.
+Most Valuable Blogger on DZone.

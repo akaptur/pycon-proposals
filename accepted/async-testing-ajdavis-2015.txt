@@ -1,0 +1,116 @@
+Title: Eventually Correct: Testing Async Apps
+
+Category: Web Frameworks
+
+Duration: 30 minutes
+
+Description:
+
+If your talk is accepted this will be made public and printed in the program.
+Should be one paragraph, maximum 400 characters.
+
+Async frameworks like Tornado and asyncio scramble our usual strategies for
+writing sequential code. This is most problematic when writing tests: how can
+you validate the outcome when you don't know when to expect it? This talk
+introduces you to methods and practices for unittesting async applications.
+
+Audience:
+
+Who is the intended audience for your talk? (Be specific; "Python programmers"
+is not a good answer to this question.)
+
+Application developers using async Python frameworks. Library authors
+developing async frameworks.
+
+Level:
+
+Objectives:
+
+What will attendees get out of your talk? When they leave the room, what will
+they know that they didn't know before?
+
+They'll learn convenient, succinct ways to express asynchronous unittests.
+They'll write tests for their Tornado- or asyncio-based applications that are
+easy to read and that run quickly and reliably.
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+The problem: async applications must be tested as thoroughly as others, but the
+typical code flow is broken. "Do something, then assert something" no longer
+works in the obvious way. After your test code launches an async operation, it
+needs some way to know when to expect the operation to be complete. Developers
+inexperienced with async frameworks insert arbitrary sleeps into their tests to
+wait for the expected outcome, or they write awkward polling loops. The
+resulting code is unreliable, breaks good testing practices, and is illegible.
+There has to be a better way.
+
+The fetch / wait pattern. Tornado's "testing" module introduced a pattern that
+allows async web applications to be easily tested. Your code does some setup
+and then fetches a URL from your application. Tornado then allows your test to
+wait cleanly, while the event loop completes processing your request. Finally,
+your test asserts the post-conditions.
+
+Loop management. The event loop must be shut down and recreated between tests
+to ensure all file descriptors and callbacks are cleared between tests. We'll
+see how to manage the loop when testing with Tornado and with asyncio.
+
+Coroutine tests. Tornado's "gen_test" decorator allows you to write tests as
+generators. We digress to explain asynchronous coroutines in general, then show
+how they vastly improve async tests' concision and reliability. Tornado helps
+you avoid some pitfalls with a few neat tricks, we'll see how those work. Then
+we see equivalent examples of testing asyncio applications with coroutines.
+
+Don't sleep. Sometimes a test requires time to pass, but calling time.sleep()
+in a test is slow, unreliable, and may block the event loop precisely when it
+needs to be running. The self-tests for asyncio demonstrate some clever
+patterns to simulate the passage of time while ensuring tests are fast and
+trustworthy.
+
+Conclusion. As async frameworks make their way into the mainstream of Python
+application programming, we must take the experience we've gained with
+conventional testing and adapt it to a new paradigm. Don't reinvent the wheel:
+there are years of wisdom embedded in Tornado's and asyncio's testing tools.
+You can write fast, reliable, and elegant async tests if you use the right
+techniques.
+
+Outline:
+
+See the Abstract.
+
+Notes:
+
+Anything else you'd like the program committee to know when making their
+selection: your past speaking experience, open source community experience,
+etc.
+
+Past speaking experience:
+
+* Most relevant to this proposal, I gave a 40-minute version of this talk,
+  using Tornado instead of Tulip as the example framework, at Open Source
+  Bridge in June 2013. I also spoke for 30 minutes on coroutines in Tornado and
+  Tulip at the NY Python Meetup in April 2013.
+
+* I've given several 40-minute talks at each of MongoDB Atlanta in April
+  2012, MongoDB Chicago in November 2012, and WindyCityDB in January 2013.
+  Topics included MongoDB schema design, replication, and the aggregation
+  framework.
+
+* I taught a 3-hour tutorial on schema design at MongoDB Atlanta in April
+  2012, and a 3-hour tutorial on MongoDB and Tornado at WindyCityDB in January
+  2013.
+
+* I've presented 30- to 40-minute talks on Motor, my async driver for MongoDB
+  and Tornado, at MongoDB Chicago in November 2012, at Python and MongoDB
+  Meetups in Seattle and Philadelphia, and at PyGotham in June 2012.
+
+* MongoDB training sessions, with between 6 and 20 students, lasting 2 or 3
+  full days, given 4 times during 2012 and 2013.
+
+Open source community experience:
+* Committer on Tulip, author of its Queue implementation.
+* Committer on PyMongo.
+* Contributor to Tornado.
+* Author of PyPI packages Motor, Toro, and YieldPoints.
+* Regular blogger on Planet Python.
