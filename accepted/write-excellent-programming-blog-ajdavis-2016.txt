@@ -1,0 +1,305 @@
+Title: Write An Excellent Programming Blog
+
+Category: Community
+
+Duration: 30 minutes
+
+Audience:
+
+Python programmers who want to start blogging, or want to write more valuable
+articles by choosing topics of lasting relevance and writing well.
+
+
+Objectives
+
+Attendees will learn article structures suited to writing about programming,
+and get ideas for topics to write about. They’ll find ways to cultivate their
+writing skills, learn to focus their effort on the audience that matters to
+them, and discover authors to emulate.
+
+
+Duration
+
+I prefer a 30 minute slot
+
+
+Description
+
+Writing rewards you and benefits us all: when you write you refine your
+thinking, share your knowledge, and connect with your niche community. This
+talk describes the special challenges of writing a programming blog. It
+outlines solid article structures, and offers methods for generating ideas and
+writing more skillfully. Get the guidance and inspiration to craft articles of
+enduring value.
+
+
+Abstract
+
+It’s a gift to us all when you share your knowledge by writing about it. It
+benefits you, too: being known as an expert or a cogent explainer helps you get
+your patches accepted by projects, get talks accepted by conferences, get
+users, get a job. Besides, writing teaches you to think: there’s no test of
+understanding so rigorous as writing an explanation.
+
+I’ll present five kinds of writing, with examples from the best programming
+articles: stories, arguments, how-tos, how things work, and reviews. For each
+format I’ll discuss its structure and suggest ideas for what you could write
+about, and share some do’s and don’ts. If you want to write but haven’t chosen
+a topic, or don’t know how to approach it, this will get you started.
+
+Once you get started, how do you improve your writing? By emulating the best
+bloggers and the best posts. I’ll share examples and discuss what makes them
+excellent.
+
+Learn how to reach your audience, get inspired, and craft articles of lasting
+value.
+
+
+Outline
+
+3 minutes: What does a Python programmer have to gain from blogging?
+
+Help others: Share your expertise, no matter how narrow. If you know how to
+parse NYC subway schedules in Python, write about it! Show me what you know so
+I can come to you for help.
+
+Anecdote: HappyBase’s author asked my advice on his connection-pool
+implementation, because I’d blogged about PyMongo’s connection pool.
+
+Help yourself: writing improves your thinking.
+
+Anecdote: Python threadlocal bugs. When I thought I had a bug, my first step
+was to start an article. I knew that writing would make me think methodically
+and help me find the bug.
+
+10 minutes: Article structures
+
+Story
+
+"I'm going to tell you a story about Foo, how it taught me Bar, and led to Baz.
+First this happened, then that happened. And that's the story of Foo."
+
+Ideas:
+
+I found a bug, diagnosed it, fixed it.
+
+We had an outage, this is the post-mortem.
+
+I went to a conference, heard talks, met people, learned something.
+
+I had trouble understanding something, then I had an experience that led to an
+insight.
+
+I had dwarf hamsters. They died. I experienced grief then acceptance.
+
+We are innately interested in stories about people. You need not be
+confessional or icky. If I get to know you a little through your blog, your
+technical posts feel warmer, and I remember who you are.
+
+Argument
+
+"Thesis. Points of evidence. Response to likely objections. Conclusion." Just
+like we learned in high school.
+
+Avoid useless controversy like "product Foo is bad" or "Bar is better than
+Foo." You have nothing to gain by attacking others. Mr. Miyagi says: "Karate
+for defense only."
+
+Ideas:
+
+You should learn technique or programming language Foo.
+
+Bar is going to be the Next Big Thing.
+
+Baz works great with Quux.
+
+You should use my project.
+
+You should hire me / work with me / come to my Meetup talk.
+
+How-To
+
+"Doing Foo is important under the given conditions. I’m going to show you how
+to Foo. Do this, then do that. There, now I’ve shown you how to Foo. You should
+go out and do Foo."
+
+Ideas:
+
+How do you debug a memory leak / crash / race condition?
+
+How do you deploy Foo in production?
+
+What steps do you take to learn Foo?
+
+How do you prepare a talk?
+
+How do you start a Meetup?
+
+Any time you solve a problem!
+
+How Something Works
+
+"Do you wonder how Foo works? Once you know, you’ll be better at using Foo
+under certain circumstances. I’m going to show you how Foo is implemented. It
+does this and that. Now I’ve shown you how it works."
+
+Almost every technology I hold in awe has been easier to understand, when I
+read its source code, than I feared it would be
+
+Ideas:
+
+How does Django generate SQL?
+
+How does Python know to recompile .pyc files?
+
+How does Gevent monkey-patch the standard library?
+
+How does socket.settimeout() work?
+
+Review
+
+"I read/saw/used something. This is what it is. This is what my experience was
+like. The thing has these strengths and weaknesses. In conclusion, it’s best
+when evaluated by certain criteria." It’s tempting to evaluate a book, movie,
+or product on a good/bad axis, but this isn’t the most useful thing to write.
+Mostly describe and analyze instead of evaluating. Tell me what the thing is
+good for.
+
+Ideas:
+
+Tech books! Need not be recent, though staying abreast of publications in your
+area is good. Reading a tech book with the intent to review it makes you read
+more closely, and teaches you about good tech writing too.
+
+Python packages.
+
+Programming websites, blogs, and videos you’ve used.
+
+Non-programming books, movies, music: Writing reviews is good practice and adds
+color to your blog.
+
+2 minutes: Distribution
+
+Email planet@python.org to be included. Your blog needs a Python-only category
+feed for Planet to aggregate.
+
+Twitter, Reddit.
+
+Your own site. Patrick McKenzie: "Build your best work into the core navigation
+of your site".
+
+That suffices. Don’t waste time on additional channels. Which brings us to our
+next topic:
+
+3 minutes: Things not to care about
+
+Don’t care about reach.
+
+It’s not about reach. It’s about satisfaction.
+
+Ignore SEO, visitors, page views.
+
+My blog has just a couple hundred visitors a day. Half arrive from Google
+search and stay one minute. Half are direct traffic and stay nearly three
+hours. They’re the ones I care about.
+
+Seth Godin: "Most of the time, you'll aim to delight the masses and you'll
+fail. So much easier to aim for the smallest possible audience, not the
+largest, to build long-term value among a trusted, delighted tribe, to create
+work that matters and stands the test of time."
+
+Don’t care about timeliness.
+
+Don’t aim to blog about news. Leave the breaking news to Tech Crunch.
+
+If you read a 50-year-old book, review it. If you’re learning C, write about
+it. Tell me what’s news for you.
+
+8 minutes: Learn by emulation
+
+People not to emulate: Daring Fireball, GigaOM, Tech Crunch. These are industry
+news sites, ultimately devoted to one question: which companies’ stocks will go
+up or down? This is not your expertise.
+
+People to emulate:
+
+Graham Dumpleton. His "Python Decorators" post series is a lasting contribution
+to the field.
+
+Kristina Chodorow. "Stock Option Basics" tells a personal story about quitting
+a startup and shares hugely important financial advice that has lasting value.
+
+Julia Evans. In her "strace zine" she uses a unique style to make deep
+technical subject matter accessible.
+
+I keep page on my site updated with a list of authors and articles I emulate.
+
+2 minutes: Inspiring conclusion
+
+You know something about programming that’s worth explaining to me.
+
+Explaining it to me greatly deepens your understanding of it, and mine.
+
+If you don’t know what to write about, riff off the ideas I suggested, or get
+inspired by the great blogs I linked to.
+
+Don’t worry about publishing quickly or frequently. Optimize for your articles’
+total lifetime value.
+
+
+
+More info
+
+
+Notes:
+
+I presented this talk at Open Source Bridge in 2014. It is based on this
+article:
+
+https://emptysqua.re/blog/write-an-excellent-programming-blog/
+
+I know it looks like a ton of content, but it really can be a half-hour talk!
+The outline is long because I have more or less written down everything I will
+say. It's easy to stretch or compress if I find, during rehearsal, that my
+timing is off.
+
+
+Past speaking experience:
+
+"How Do Python Coroutines Work?" live-coding demonstration at Open Source
+Bridge and PyGotham 2015.
+
+"MongoDB Drivers And High Availability: Deep Dive" at MongoDB World 2015.
+
+"Eventually Correct: Testing Async Apps" and "Python Profiling: The Guts And
+The Glory", at PyCon 2015.
+
+"March to Triumph as a Mentor" at PyTennessee and QCon 2015.
+
+"What Is Async, How Does It Work, and When Should I Use It?" at Open Source
+Bridge in 2013 and PyCon Montreal, PyCon APAC, and OSCON in 2014.
+
+
+Videos of me speaking:
+
+Open Source Bridge 2015: https://www.youtube.com/watch?v=GSk0tIjDT10
+
+MongoDB World 2015:
+https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive
+
+PyCon 2015:
+http://emptysqua.re/blog/pycon-video-eventually-correct-async-testing/
+
+MongoDB World 2014:
+http://www.mongodb.com/presentations/weather-century-part-3-visualization
+
+PyCon Montreal 2014: http://emptysqua.re/blog/pycon-2014-video-what-is-async/
+
+Speaker Bio
+
+Staff Engineer at MongoDB in New York City specializing in Python and C. Author
+of Motor, an async MongoDB driver for asyncio and Tornado. Contributor to
+Python, asyncio, PyMongo, MongoDB, and Tornado.
+
+Blogs at https://emptysqua.re/
+
