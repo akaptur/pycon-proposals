@@ -1,0 +1,78 @@
+=============================
+How to Write a Bad Bug Report
+=============================
+
+:Author: David Baumgold
+:Contact: david@davidbaumgold.com
+:Year: 2016
+:Category: Best Practices & Patterns
+:Duration: 30 min
+:Audience: Anyone
+:PythonLevel: Novice
+
+Description
+===========
+
+Ah, bug reports: everyone's favorite venue for complaining about whatever's
+on their mind. In this talk, we'll go over some truly terrible bug reports,
+and analyze what makes them so bad. You'll learn how to write some truly
+horrible bug reports yourself — or how to avoid those pitfalls, if you want
+to write a good bug report for some reason.
+
+Objectives
+==========
+
+This talk will use humor to help inexperienced contributors feel more
+comfortable filing bugs in open source projects. It will also help
+experienced software developers provide guidance to others on how to
+write useful bug reports: asking for specific details, context,
+and expectations.
+
+Abstract
+========
+
+Bug reports come in all shapes and sizes, all colors and varieties, but
+there's one very important consistency among bug reports: they're usually bad.
+Bad bug reports make it more difficult for software maintainers to find and
+fix bugs, which makes it take longer to create new releases, which makes for
+less change, and change is scary. So clearly, we should work on making bug
+reports as terrible as possible.
+
+But what makes a bug report bad, or good? In this talk, we'll learn who uses
+bug reports, how they are used, and what factors are important in crafting a
+truly terrible bug report. We'll go over some examples of awful bug reports,
+and learn what makes each one so bad: we'll see ambiguity, unreproducible
+situations, incendiary flamewars, and a whole lot more! We'll also contrast
+these examples with well-written bug reports, so that you can see the
+important factors that can turn a bad bug report into a practical and
+useful one. (Not that you'd ever want to do that, of course.)
+
+In the process, you'll learn why well-intentioned people write bad bug reports,
+and how to help them change their behavior. You may gain some insight into the
+lifecycle of software bugs, and how to identify and squash likely bugs before
+your users encounter them. You might even find yourself writing better bug
+reports as a result, and helping others to do the same. If you do, I
+sincerely apologize.
+
+
+Outline
+=======
+
+* What is a bug report? Why do software maintainers want bug reports? (2 minutes)
+* Common ways to make bad bug reports, with a contrasting example for each (8 minutes)
+  * Lacking details about the problem: "It's broken!"
+  * Lacking details about the environment: "I've run this on 10 servers, and its broken on half of them!"
+  * Lacking screenshots: "It looks funny."
+  * Lacking logs: "It says 500 Server Error."
+  * Lacking expected behavior: "I press this button, and that thing happens. Fix it!"
+  * Wordiness: "Dear Alice, today I sat down at the computer and turned it on..."
+  * Lacking steps to reproduce: "This one time, it broke. Every other time I did this, it worked right. Why can't it work right all the time?"
+  * Insults and flamewars
+* Why do well-intentioned people make bad bug reports? (5 minutes)
+  * Don't know how to write good bug reports
+  * Frustrated or angry
+  * Don't understand how the software works, and what debugging context is important. (How do I find the logs on my computer?)
+* How to encourage good bug reports (5 minutes)
+  * Provide examples of excellent bug reports, and thank people for filing them (positive feedback!)
+  * Provide a template questionnaire to fill out when filing bugs
+  * After the report is filed, follow up with the reporter. Maybe you can get them to provide additional clues or context!
