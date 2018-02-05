@@ -1,0 +1,50 @@
+Title: API Evolution the Right Way
+
+Category:
+
+Duration: 30 minutes
+
+Description:
+
+If your talk is accepted this will be made public and printed in the program. Should be one paragraph, maximum 400 characters.
+
+If you maintain a library, how can you innovate without breaking the projects that depend on it? Follow semantic versioning, add APIs conservatively, add parameters compatibly, use DeprecationWarnings and publish a deprecation policy, guide your users on how to upgrade, and make wise choices about when to break backwards compatibility.
+
+Audience:
+
+Who is the intended audience for your talk? (Be specific; "Python programmers" is not a good answer to this question.)
+
+This talk is for maintainers of software libraries who care about the future of their projects. The audience must have some experience with Python, be familiar with the distinction between public API and private implementation, and understand how PyPI packages depend upon each other. They will learn how to maintain backwards compatibility as they add features to their libraries, and they will learn heuristics for deciding when to break backwards compatibility.
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+(1 minute) Good library maintainers keep their promises to the people who depend on them: they release bugfixes, add useful new features, and continue to innovate. Perhaps most importantly, they never introduce backward-breaking changes unexpectedly. How can you be a good library maintainer and ensure you simultaneously innovate and preserve compatibility?
+
+(5 minutes) The bedrock of library compatibility is semantic versioning: it's a convention that communicates with version numbers whether a release contains bugfixes, new features, or compatibility-breaking changes. Tools like "pip" understand semantic version numbers, and PEP 440 defines the syntax for version numbers.
+
+(5 minutes) You can reduce the need for backward-breaking changes by keeping your API as small as possible. Make no public method, class, function, or attribute without a good reason. Adding more public APIs is easy, after all, but removing them is painful. If you don't know whether a feature is worth supporting forever, introduce it as "provisional" to gauge interest.
+
+(5 minutes) Add parameters compatibly. New positional parameters must have default values and be placed at the end of the parameter list. Adding new keyword arguments is less risky, which is why Python 3 introduces syntax for keyword-only arguments. Future-proof your functions and methods using this new syntax.
+
+(5 minutes) Sometimes in the course of human events it becomes necessary to make incompatible changes. Be conservative: the more effort you demand from your existing users, the less likely they are to upgrade. In the worst case you can be stuck in the same predicament as the Python team, maintaining both versions for many years. Compare each change's benefit to its cost.
+
+(8 minutes) If you choose to break compatibility, treat your users gently. First implement the new API and raise a DeprecationWarning from the old API, and wait for the next major release before deleting the old API. This method allows your users to rewrite their code incrementally. Plus, they will be able to test changes to their code, and changes in your library, independently from each other and isolate the cause of bugs. Publish a deprecation policy document that explains how you will maintain your library's API, and teach users how to check for DeprecationWarnings and update their code as your library evolves.
+
+(1 minute) Conclusion: If you follow these steps you will act as a trustworthy maintainer for your library's users, while preserving your freedom to innovate.
+
+Notes:
+
+Anything else you'd like the program committee to know when making their selection: your past speaking experience, open source community experience, etc.
+
+I have not given this talk before. It is based on my experience on the teams maintaining Tornado, asyncio, the MongoDB C Driver, PyMongo, Motor, and other libraries.
+
+Here's some videos of me speaking:
+
+* PyCon 2016: https://emptysqua.re/blog/write-an-excellent-blog-pycon-2016/
+* MongoDB World 2015: https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive
+* Open Source Bridge 2015: https://www.youtube.com/watch?v=GSk0tIjDT10
+* PyCon 2015: http://emptysqua.re/blog/pycon-video-eventually-correct-async-testing/
+
+Thanks!
