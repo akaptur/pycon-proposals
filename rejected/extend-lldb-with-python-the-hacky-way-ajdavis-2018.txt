@@ -1,0 +1,50 @@
+Title: Extend LLDB with Python the Hacky Way
+
+Category:
+
+Duration: 20 minutes (15 minutes + Q & A)
+
+Summary:
+
+The LLDB debugger embeds a Python interpreter you can use to display complex data in your C or C++ program, or to script a sequence of steps with the debugger. This is astonishingly useful, but it's painful writing Python scripts in this environment. I'll demonstrate a handy method to develop LLDB scripts with the PyCharm IDE and show you examples of great debugging tools you can build this way.
+
+Audience:
+
+Who is the intended audience for your talk? (Be specific; "Python programmers" is not a good answer to this question.)
+
+Programmers who sometimes write C, C++, or another language that can be debugged with LLDB. The audience should know some Python and should have used a native debugger like LLDB, GDB, or Microsoft Visual Studio. They will learn how powerful LLDB's Python extension API is, and they'll learn an easy method for developing LLDB extensions.
+
+Level:
+
+Objectives:
+
+What will attendees get out of your talk? When they leave the room, what will they know that they didn't know before?
+
+Abstract:
+
+Detailed description. Will be made public if your talk is accepted.
+
+(1 minute) LLDB is an interactive debugger, similar to GDB. It's part of the LLVM suite that includes the Clang compiler. LLDB is best friends with Python: it makes very powerful Python extensions possible by exposing all of its internal state as a Python API.
+
+(5 minutes) Why do we want to write Python extensions for LLDB? I'll show an example from my own work as the maintainer of a MongoDB C Driver. When I debug my C code, it's crucial that I get a nicely formatted view of MongoDB data in my debugger. There's no way to visualize this data using LLDB alone, but a Python extension can visualize it beautifully. I'll describe what LLDB extensions can do and the scenarios in which writing an extension is worthwhile.
+
+(4 minutes) The LLDB API for Python is very powerful, but its documentation is confusing for Python programmers. It's also difficult to explore interactively: we're used to exploring Python APIs in the REPL or a Python debugger, but the LLDB API makes this impossible. Developing a Python extension for LLDB can make you tear your hair out.
+
+(10 minutes) I'll show a method for developing LLDB extensions interactively using the PyCharm debugger. We can attach the debugger to a running LLDB process, set breakpoints in our Python extension, and explore the LLDB API using a debugger and a REPL the way we're used to. We restore all the intuitiveness and productivity of Python, while executing inside the context of LLDB.
+
+(5 minutes) Now that you've developed an LLDB extension, share it with the world! I'll show how to package an LLDB extension with your library or publish it as a standalone.
+
+(1 minute) Conclusion: LLDB extensions are powerful, and with the right tools they're not too painful to develop. If you're a C or C++ programmer, you can improve your life by automating your common LLDB tasks and visualizing data structures in the programs you debug. If you ship a C or C++ library, help your users by developing LLDB extensions for working with your library, and ship your Python extensions alongside your native code.
+
+Notes:
+
+Anything else you'd like the program committee to know when making their selection: your past speaking experience, open source community experience, etc.
+
+This is a new talk based on my last couple years experience developing and debugging open source libraries in in C and Python. Here's some videos of me speaking in the past:
+
+* PyCon 2016: https://emptysqua.re/blog/write-an-excellent-blog-pycon-2016/
+* MongoDB World 2015: https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive
+* Open Source Bridge 2015: https://www.youtube.com/watch?v=GSk0tIjDT10
+* PyCon 2015: http://emptysqua.re/blog/pycon-video-eventually-correct-async-testing/
+
+Thank you for your consideration!

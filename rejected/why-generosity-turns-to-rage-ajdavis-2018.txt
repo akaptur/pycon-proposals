@@ -1,0 +1,54 @@
+Title: Why Generosity Turns To Rage, and What To Do About It
+
+Duration: 45 minutes
+
+Description:
+
+On mailing lists, IRC, Stack Overflow, and bug trackers, we often act viciously toward newcomers. Why? If we intend to be generous, why do we lash out? I'll propose a theory for why generosity turns to rage, and a method for keeping our tempers and enjoying our interactions with beginners. We can cultivate diverse and welcoming communities by acting with true generosity.
+
+Who and Why (Audience):
+
+This talk is for people who are experts in some specialty, who spend time answering questions and discover that they lose their temper with beginners. The audience will learn to be vigilant about anger, understand the source of the anger, and gain methods for being steadily compassionate toward less experienced people online.
+
+Outline:
+
+"Angry Santa." (3 minutes.) SantaCon is a yearly event in NYC where people dress as Santa and party on the streets. I saw a man dressed as Santa give a homeless man five dollars, then yell at the man for not saying "thank you." This story is upsetting, but it's worth thinking about. I've lost my temper at people I wanted to help, and I bet you have, too. Why?
+
+Thesis (2 minutes): It's crucial for the Python and Open Source communities to be gentle and welcoming to beginners. But many times we lash out at them. We treat them like they're stupid. This causes suffering for beginners and experts alike, and it undermines our efforts to expand our communities and to welcome diverse newcomers. It's time for us to understand why we lose our temper, and train ourselves to be consistently compassionate when people ask basic questions.
+
+Why Does This Matter? (8 minutes.) Python is now the most common programming language for Stack Overflow questions, and is likely to keep growing. This is good news for us: it means Python is becoming more popular, so our skills are more valuable and our career opportunities are expanding. But we can't take this for granted. I'll show examples of people being rude to Python beginners on Stack Overflow. If we lash out at beginners like this, our community becomes small, exclusive, and unkind.
+
+The Trouble With Stack Overflow. (5 minutes.) Stack Overflow optimizes for the experience of someone reading questions that are already answered. It's like watching the end of the Hunger Games: you only see the winner in her beautiful dress. But actually participating on SO feels like a bloodsport. Let's do a 30-second interactive exercise to experience this. Pair up, and the partner on the left says, "How do I convert from PNG to GIF in Python?" The partner on the right says, "Just Google it. You're lazy and stupid!" Now, how does that feel?
+
+Three scenarios that make me lose my temper (8 minutes):
+
+Scenario 1. "Generosity without the payoff."
+Scenario 2. "Unexpected difficulty."
+Scenario 3. "Sense of obligation."
+
+A Flowchart For Answering Questions (8 minutes). First of all, this talk is not for trolls. The only way to deal with trolls is to ban them. This talk is for people with generous intent, who sometimes lose their temper.
+
+I present a flowchart with 7 boxes to follow after you read a beginner's question online. follow these steps to avoid answering in anger. First, read the question, then take three breaths and ask yourself, "Am I angry?" If so, you can walk away. Or, to stop being angry, remember your original intention. If you have overcome your anger, you can answer the question. But be careful: if the beginning programmer doesn't understand your answer, and requires more effort than you expected, this can be a dangerous moment when you are prone to losing your temper.
+
+Starting With The Right Tone (3 minutes): It's easy to begin on a positive note. Just type "Good question!" Let's do another 30-second interactive exercise. The partner on the left says, "How do I convert from GIF to PNG?" The partner on the right says, "Good question!" Doesn't that feel better?
+
+Conclusion (2 minute): Beginners feel hurt and rejected when experts lash out at them for asking simple questions. This drives people out of our communities, particularly members of underrepresented groups. It hurts experts, too: it's no fun be angry. With a better understanding of what makes us lose our temper, we can return to our original intentions and be consistently gentle and helpful. Acting this way cultivates a happy community that's inclusive for everyone.
+
+The Three-Breath Vow (1 minute): The best way to avoid answering in anger is to KNOW that you are angry, but that requires pausing for a moment before answering. I invite you, if you want, to repeat after me this simple vow:
+
+"I vow to take 3 breaths before I answer a question online."
+
+Notes:
+
+I gave this as a keynote presentation to a small Plone conference in Barcelona in 2017. I hope to have the opportunity to present it to a larger audience at PyCon.
+
+In Barcelona the talk took about 40 minutes. I'd love a 45-minute slot, but I can happily trim it to 30 by cutting some analysis of how Stack Overflow discourages polite conversation. I can also spend less time on each of the points in "Three scenarios that make me lose my temper" and "a flowchart with 7 boxes to follow".
+
+Here's a video and transcript from PloneConf: https://emptysqua.re/blog/keynote-why-generosity-turns-to-rage/
+
+Here's some more videos of me speaking:
+
+* PyCon 2016: https://emptysqua.re/blog/write-an-excellent-blog-pycon-2016/
+* MongoDB World 2015: https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive
+* Open Source Bridge 2015: https://www.youtube.com/watch?v=GSk0tIjDT10
+* PyCon 2015: http://emptysqua.re/blog/pycon-video-eventually-correct-async-testing/
