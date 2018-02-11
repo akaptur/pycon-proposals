@@ -1,0 +1,56 @@
+#914: Subinterpreters and You! (Eric Snow)
+
+Description:
+
+Did you know that the CPython runtime supports running multiple independent interpreters
+at the same time, in the same process? It has since the 1.X days, in fact! The catch is
+that it's only exposed in the C-API. With Python 3.7 you'll be able to use subinterpreters
+from Python code, though with some caveats for now.
+
+Come to this talk to find out what subinterpreters are, why you should care, how to take
+advantage of them, what their limitations are, and how they may eventually support GIL-free
+parallelism in Python (without async). 
+
+Audience:
+
+This talk is aimed at mostly everyone, though beginners probably won't get a lot out of the
+it. :)  In particular, this talk will interest anyone that uses concurrency in their code (or
+wants to be conversant in the topic), as well as anyone who has ever complained about the GIL.
+That's a reasonably sized group. <wink>  Library authors that want to take advantage of
+subinterpreters (via extension modules) will also benefit.
+
+The talk will also involve a small amount of discussion on CPython internals, so that crowd
+may be interested. However, this will not be a deep dive into internals; I should be able to
+give any necessary context to a general audience. At least half the talk will be a practical
+demonstration of using subinterpreters from Python.
+
+My goal is to get people (really, everyone) interested enough to try out subinterpreters and
+fall in love. :)  While a module will be on PyPI for 3.7, I expect it to land in the 3.8
+stdlib (see PEP 554). Getting feedback early is important, but so is opening everyone up to
+a powerful tool in their interpreter.  In particular, it's a tool that provides an eventually
+GIL-free concurrency model that fits the human brain (i.e. not async) and will allow
+multi-core parallelism in Python code.
+
+Outline:
+
+A rough outline that gives me some wiggle room:
+
+1. what are subinterpreters (4 minutes)
+1. what's different in Python 3.7 (1 minute)
+1. the C-API (1 minute)
+1. running code in a subinterpreter from Python (3 minutes)
+1. subinterpreters and threads (2 minutes)
+1. interpreter isolation (2 minutes)
+1. sharing data (5 minutes)
+1. a different approach to concurrency (2 minutes)
+1. limitations and caveats (2 minutes)
+1. a GIL-free, async-free future (3 minutes) 
+
+Additional notes:
+
+PEP 554 relates closely to this talk. While the PEP isn't accepted for 3.7, completed work
+in 3.7 will allow for a module on the cheeseshop that exposes subinterpreters to Python code.
+
+Conversation with Reviewers:
+
+Absolutely zero. :/
