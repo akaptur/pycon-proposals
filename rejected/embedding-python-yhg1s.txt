@@ -1,0 +1,60 @@
+Title: Embedding Python
+
+Submitted by: Thomas Wouters
+
+Duration: prefer 45 minutes
+
+Description:
+The ability to embed Python in C/C++ code has long been considered a major benefit of Python: running Python code as part of a larger, non-Python application, often using it as a scripting language or for user-written plugins. The reality is a little more complicated than that, though.
+
+This talk goes through the general process of embedding Python. The focus is CPython and its C API, but PyPy, IronPython and Jython are also briefly covered, as is CFFI's approach to embedding CPython. It covers the details of the CPython's C API, the non-obvious implications of that implementation, and how to deal with the standard library. It also covers the restrictions and limitations of embedding CPython, and offers some alternatives instead.  
+
+Audience:
+Embedding CPython is one of the hardest things to do with Python, especially doing it in a maintainable way. In the #python IRC channel on Freenode we occasionally get people asking questions about some detail of this that uncovers how unprepared they are for the reality of the process: the usual cruftiness of the Python C API (refcounting, finding the right functions), plus everything you should be aware of when embedding: where to get the Python interpreter; how to launch it correctly; how to isolate or interrupt the Python code; threads; callbacks; restricting resources. Also, which of these things you *can't* do (most) and how to avoid a lot of the mess to start with (by not embedding, by using CFFI, or by using PyPy/IronPython/Jython).
+
+The intent for this talk is to give both existing and aspiring embedders of Python a good overview of the process of embedding Python, what to expect or not to expect, and alternatives to consider. It assumes working knowledge of both Python and C. 
+
+Outline:
+(In brackets are the estimated times for the segments: 45m / 30m)
+
+ - Introduction [ 2m / 2m ]
+Introduce myself and the talk, explain some of the vocabulary.
+
+ - What is embedding? [ 3m / 2m ]
+
+Explain the concept of embedding, and why it might be desirable. Also, explain why you might not want to embed Python.
+
+ - The CPython C API [ 5m / 4m ]
+
+Describe the CPython implementation and its C API, and how the "python" program itself is effectively a C program embedding Python. Briefly cover reference counts and ELF symbol resolution. Emphasise writing most code as extension modules, for easier testing.
+
+ - Embedding CPython [ 5m / 4m ]
+
+Cover the basics of embedding CPython: initialising and finalising the interpreter; building and linking against CPython. Also emphasise thread-safety, signal handling, the GILState API for callbacks, and the lack of sandboxing and control. End with a complete but simple code example.
+
+ - Embedding Pitfalls and Best Practices [ 10m / 6m ]
+
+Elaborate on the code example to show what Python will actually do: finding its standard library (including how it deals with virtualenvs and the user-site directory); loading extension modules (including standard library ones); resolving dependencies of C/C++ libraries at build time and runtime; sharing C and Python globals; reporting reference leaks. Describe various pitfalls and problems and offer ways to change and constrain them, using code examples. Remind people that testing is important, and to write most code as regular (extension) modules.
+
+ - Embedding PyPy, IronPython, Jython [ 3m / 2m ]
+
+Briefly describe how embedding works in IronPython and Jython, using their high-level APIs. Mention the fundamentally different approaches of C# and Java, compared to C, had how this affects the implementations' designs. Describe how embedding works in PyPy, how it's different from CPython, and how to emulate PyPy's approach in CPython to ease potential migration and code re-use.
+
+ - Embedding with CFFI [ 4m / 2m ]
+
+Describe the CFFI embedding API, and how it works for both CPython and PyPy (and potentially other Python implementations). Sketch how interaction between the embedding application and the Python runtime would work with CFFI. Briefly mention Cython, too, since people will wonder about it.
+
+ - Extending instead of embedding [ 3m / 2m ]
+
+Reiterate all the pitfalls, downsides and limitations of embedding, and describe how much easier it would be to extend, instead.
+
+ - How we embed at Google [ 5m / omitted altogether ]
+
+Describe how we do things at Google, where we build all Python programs as embedded Python in a small C++ program. Enumerate the benefits of that approach, why the pitfalls don't apply or how we work around them. Also describe how the situation is different from using Python as a scripting language for a larger C++ application, and re-emphasise again that extending is better than embedding.
+
+ - Questions [ 5m ]
+ 
+Additional notes:
+I would prefer this to be a 45-minute talk, since it allows me to go into greater detail on some of the issues: it's a meaty, technical subject, and detail sometimes matters greatly. The section on how we embed Python at Google for all Python programs (what we call Hermetic Python) can be omitted entirely, although I believe it offers an interesting perspective on what you can do with Python. We've been thinking about open-sourcing Hermetic Python, but expect there'd not be much interest; this would give us a chance to test that assertion.
+
+Also, to save you from reading my bio, I've been a CPython core developer since 2001, and at Google maintaining the internal Python infrastructure since 2006. This is a technical subject I know a lot about. I haven't given a PyCon talk since before they were recorded, but here's a Google tech talk I gave in 2007: https://www.youtube.com/watch?v=uOzdG3lwcB4. 
