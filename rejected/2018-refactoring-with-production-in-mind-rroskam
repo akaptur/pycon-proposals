@@ -1,0 +1,51 @@
+Title: Refactoring with Production in Mind: Look Downstream Before You Blow Up the Dam
+
+Category: Normal Track
+
+Duration: 30 minutes
+
+Description:
+A post-mortem about why small code changes can have large effects. I made a refactor in an application that was using Celery to move away from the Postgres message backend to Redis. The ensuing comedy of errors in the production environment led one of my co-workers to quip to me, "While we'd love to say that configuration changes like this should be simple and not at all dangerous, you probably should always look downstream before you blow up the dam."
+
+I'll be walking through what change I made, what effect it had, how I remedied it, and what I'd do differently next time. 
+
+Audience:
+Who is this talk for? 
+In my opinion, this is for all experience levels, because several senior people made this mistake together, but this seems like a newbie mistake.
+
+What background knowledge or experience do you expect the audience to have?
+I expect an attendee to have some programming experience and some direct server experience. However, enough context will be given in the talk that using the technologies mentioned specifically matter less because the core lesson is that we didn't fully understand the impact of our decisions.
+
+What do you expect the audience to learn or do after watching the talk?
+This talk reinforces the idea that even though we speak in idealized terms of programming for scale: you can't treat different technologies as perfectly fungible and interchangeable. So you actually need to understand the idiosyncrasies of each. 
+
+ 
+Outline
+0) Who is this person talking - 1 min
+
+1) What change I made - 4 min
+- Talking through the nature of the Django/Celery application
+- Explaining the original configuration
+- Showing what I changed to config to be
+
+2) What effect it had - 15 min
+- Production environment overview
+- Existing Redis config in production that would offload to disk
+- Resized Postgres/Redis DB server instance to 16 GB RAM so that it could handle additional production load of new client, but used the default, very small attached disk of 1 GB
+- Redis ran out of memory for some reason and exploded onto the disk
+- Celery beat attempted and failed continuously for about 48 hours to reconnect to Redis, starting about noon on a Saturday
+- Saturated RAM and network on DB server instance so we couldn't get in
+
+3) How I remedied it - 10 min
+- Turned off the setting for Redis to page to disk
+- Made changes to Celery so that connections wouldn't persist for eternity
+
+4) What I'd do differently next time - 10 min
+- Check the settings for Redis
+- Make sure not to use the default settings on AWS for the server instance
+ 
+Additional notes
+Comfortable public speaking. Have led a Python user group of about 15 people for the past 2 years.
+Experienced 2 years in Celery, but a novice in Redis.
+Have not currently given this talk anywhere else.
+No special needs. 
